@@ -1,5 +1,7 @@
-# Extract files in the root directory hook
-
 import os
+import shutil
 
-print(os.listdir())
+files =  os.listdir()
+
+for file in files:
+    shutil.move("./" + file , "../")
