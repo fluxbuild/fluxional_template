@@ -15,7 +15,7 @@ def move_files():
 
     try:
         # Delete original directory 
-        os.rmdir("../" + "{{cookiecutter.project_name}}")
+        shutil.rmtree("../" + "{{cookiecutter.project_name}}")
     except OSError as e:
         print(e)
 
