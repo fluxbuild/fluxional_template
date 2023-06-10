@@ -13,9 +13,11 @@ def move_files():
             shutil.move("./" + file , "../")
 
 
-    # Delete original directory
-    os.rmdir("./" + "{{cookiecutter.project_name}}")
-
+    try:
+        # Delete original directory
+        os.rmdir("./" + "{{cookiecutter.project_name}}")
+    except OSError as e:
+        ...
 
 if __name__ == "__main__":
     move_files()
