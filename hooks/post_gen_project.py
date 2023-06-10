@@ -14,10 +14,10 @@ def move_files():
 
 
     try:
-        # Delete original directory
+        # Delete original directory 
         os.rmdir("./" + "{{cookiecutter.project_name}}")
     except OSError as e:
-        ...
+        print(e)
 
 if __name__ == "__main__":
     move_files()
