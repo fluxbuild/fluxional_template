@@ -1,4 +1,4 @@
 {
   "project_name": "fluxional_app",
-  "use_poetry": false
+  "use_poetry": "false"
 }
