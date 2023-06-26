@@ -23,4 +23,5 @@ def move_files():
         print(e)
 
 if __name__ == "__main__":
+    print("RUNNING POST GENERATION HOOK")
     move_files()
