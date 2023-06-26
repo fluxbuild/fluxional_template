@@ -15,7 +15,7 @@ def move_files():
 
     try:
         # Delete original directory 
-        shutil.rmtree("../" + "{{cookiecutter.project_name}}")
+        shutil.rmtree("../" + "fluxional_app")
     except OSError as e:
         print(e)
 
