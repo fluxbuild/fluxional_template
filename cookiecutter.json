@@ -3,5 +3,7 @@
   "use_poetry": "false",
   "use_github_actions": "true",
   "add_tests": "true",
-  "_copy_without_render": ["*.yml"]
+  "_copy_without_render": [
+    "{% if cookiecutter.use_github_actions == 'true' -%}deploy.yml{%- endif %}"
+  ]
 }
