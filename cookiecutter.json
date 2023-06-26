@@ -1,3 +1,4 @@
 {
-  "project_name": "fluxional_app"
+  "project_name": "fluxional_app",
+  "use_poetry": true
 }
