@@ -18,7 +18,7 @@ jobs:
           python-version: "3.10"
 
       - name: Install dependencies
-      run: npm install -g aws-cdk
+        run: npm install -g aws-cdk
 
 {% if cookiecutter.use_poetry == "true" -%}
       
