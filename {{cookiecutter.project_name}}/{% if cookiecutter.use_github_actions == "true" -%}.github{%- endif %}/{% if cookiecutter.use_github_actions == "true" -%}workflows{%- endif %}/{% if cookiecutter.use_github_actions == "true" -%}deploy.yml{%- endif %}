@@ -19,7 +19,9 @@ jobs:
 
       - name: Install dependencies
       run: npm install -g aws-cdk
+
 {% if cookiecutter.use_poetry == "true" -%}
+      
       - name: Install poetry
         run: python -m pip install poetry==1.5
 
@@ -35,10 +37,13 @@ jobs:
           aws-access-key-id: {% raw %}${{ secrets.AWS_ACCESS_KEY_ID }}{% endraw %}
           aws-secret-access-key: {% raw %}${{ secrets.AWS_SECRET_ACCESS_KEY }}{% endraw %}
           aws-region: {% raw %}${{secrets.AWS_REGION}}{% endraw %}
+
 {% else %}
+      
       - name: Install tests
         run: python -m pip install -r requirements.txt 
-{%- endif %}
+
+  {%- endif %}
       - name: Synth deploy
         run: cdk deploy --all --require-approval never
         env:
