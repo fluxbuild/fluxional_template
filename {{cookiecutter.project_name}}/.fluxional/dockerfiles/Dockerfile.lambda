@@ -1,10 +1,10 @@
 FROM public.ecr.aws/lambda/python:3.10
 COPY . ${LAMBDA_TASK_ROOT}/
 WORKDIR ${LAMBDA_TASK_ROOT}/
-{% if cookiecutter.use_poetry == "true" -%}
+{% if cookiecutter.use_poetry == "true" %}
 RUN pip install poetry==1.5
 RUN poetry config virtualenvs.create false && poetry install --no-interaction --no-ansi --no-root
 {% else %}
 RUN pip install -r requirements.txt --target "${LAMBDA_TASK_ROOT}"
-{%- endif %}
+{% endif %}
 CMD ["app.handler"]
