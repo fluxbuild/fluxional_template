@@ -20,15 +20,4 @@ jobs:
       - name: Install dependencies
         run: npm install -g aws-cdk
 
-      - name: Configure aws credentials
-        uses: aws-actions/configure-aws-credentials@master
-        with:
-          aws-access-key-id: {% raw %}${{ secrets.AWS_ACCESS_KEY_ID }}{% endraw %}
-          aws-secret-access-key: {% raw %}${{ secrets.AWS_SECRET_ACCESS_KEY }}{% endraw %}
-          aws-region: {% raw %}${{secrets.AWS_REGION}}{% endraw %}
-
-      - name: Synth deploy
-        run: cdk deploy --all --require-approval never
-        env:
-          AWS_REGION: {% raw %}${{secrets.AWS_REGION}}{% endraw %}
-          AWS_ACCOUNT_ID: {% raw %}${{secrets.AWS_ACCOUNT_ID}}{% endraw %}
+{% include "secrets.txt" %}
