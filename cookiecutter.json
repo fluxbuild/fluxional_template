@@ -1,7 +1,7 @@
 {
   "project_name": "fluxional_app",
   "use_poetry": "false",
-  "use_github_actions": "true",
-  "add_tests": "true",
+  "use_github_actions": "false",
+  "add_tests": "false",
   "add_env_file": "false"
 }
