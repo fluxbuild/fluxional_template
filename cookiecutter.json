@@ -3,5 +3,6 @@
   "use_poetry": "false",
   "use_github_actions": "false",
   "add_tests": "false",
-  "add_env_file": "false"
+  "add_env_file": "false",
+  "add_readme": "false"
 }
