@@ -1,4 +1,4 @@
-poetry run coverage run -m pytest -vv
-poetry run mypy .
-poetry run ruff .
-poetry run coverage html
+{% if cookiecutter.use_poetry == "true" %}poetry run {%endif%} coverage run -m pytest -vv
+{% if cookiecutter.use_poetry == "true" %}poetry run {%endif%} mypy .
+{% if cookiecutter.use_poetry == "true" %}poetry run {%endif%} ruff .
+{% if cookiecutter.use_poetry == "true" %}poetry run {%endif%} coverage html
